@@ -15,7 +15,7 @@
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yokhon/Words2Wheels.git
+   git clone -b main --single-branch https://github.com/yokhon/Words2Wheels.git
    cd Words2Wheels
    ```
 
@@ -61,20 +61,6 @@
   ```
 
   The resulting statistical information will be stored in `db/stat/`.
-
-
-[//]: # (## Repository Structure)
-
-[//]: # ()
-[//]: # (- `db/reward/`: Initial reward functions.)
-
-[//]: # (- `db/model/ppo/`: Trained models.)
-
-[//]: # (- `db/stat/`: Statistical evaluation results.)
-
-[//]: # (- `train.py`: Script to train the models.)
-
-[//]: # (- `simulate.py`: Script to test the models.)
 
 
 ## 🔖 Citation
