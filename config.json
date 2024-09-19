@@ -1,0 +1,39 @@
+{
+  "data_path": "data/HighD.npy",
+  "reward_path": "db/reward",
+  "model_path": "db/model/ppo",
+  "stat_path": "db/stat",
+  "tensorboard_path": "log/tensorboard",
+  "rl_algo": "PPO",
+  "rl_params": {
+    "max_epoch": 20,
+    "step_per_epoch": 40000,
+    "step_per_collect": 10000,
+    "episode_per_test": 100,
+    "batch_size": 1024,
+    "repeat_per_collect": 16,
+    "buffer_size": 200000,
+    "max_batchsize": 1024,
+    "gamma": 0.9,
+    "gae_lambda": 0.95,
+    "hidden_sizes": [32],
+    "lr": 1e-3,
+    "lr_decay": true,
+    "max_grad_norm": 0.5,
+    "vf_coef": 0.25,
+    "ent_coef": 0.01,
+    "eps_clip": 0.32,
+    "value_clip": true,
+    "dual_clip": null,
+    "norm_adv": true,
+    "recompute_adv": false,
+    "training_env_num": 4,
+    "action_scaling": true,
+    "action_bound_method": "clip",
+    "train_seed": 3
+  },
+  "env_params": {
+    "envs_seed": 43
+  },
+  "idm_params": [32.0489077, 0.74084102, 1.18623382, 0.87773747, 1.0, 2.95210611]
+}
