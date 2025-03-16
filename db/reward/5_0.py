@@ -9,8 +9,8 @@ def _get_reward(self):
     sim_spacing, sim_speed = self._sim_scenario[self._scenario_idx - 1][:2]
     gt_spacing, gt_speed = self._scenario[self._scenario_idx - 1][:2]
 
-    spacing_diff = -np.log(np.abs(sim_spacing - gt_spacing) / max(gt_spacing, 1e-3))
-    speed_diff = -np.log(np.abs(sim_speed - gt_speed) / max(gt_speed, 1e-3))
+    spacing_diff = -np.log(max(np.abs(sim_spacing - gt_spacing), 1e-6) / max(gt_spacing, 1e-6))
+    speed_diff = -np.log(max(np.abs(sim_speed - gt_speed), 1e-6) / max(gt_speed, 1e-6))
 
     rewards['spacing_diff'] = spacing_diff * spacing_diff_weight
     rewards['speed_diff'] = speed_diff * speed_diff_weight
